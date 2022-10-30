@@ -12,6 +12,10 @@ let clientWithMultipleURLs = ldap.createClient({
     ]
 });
 
+client.port === 1389
+client.host === "127.0.0.1"
+clientWithMultipleURLs.secure === false
+
 client.bind('cn=root', 'secret', (err: Error): void => {
     // nothing
 });
